@@ -26,14 +26,14 @@ async def on_message(message):
     if message.author == client.user or message.author.bot:
         return
     content = message.content.lower()[len(PREFIX):]
-    print(content)
+    # print(content)
     if(content.startswith('counter')):
         await counter(message)
     else:
         await etc(message)
 
 async def counter(message):
-    print(message.author.id)
+    # print(message.author.id)
     ret = ''
     for userID in CATALOG[str(message.guild.id)]:
         user = await client.fetch_user(str(userID))
@@ -48,7 +48,7 @@ async def etc(message):
         CATALOG[str(message.guild.id)][str(message.author.id)] = CATALOG.get(str(message.guild.id)).get(str(message.author.id), 0) + 1
         with open('data.json', 'w') as DATA_FILE:
             json.dump(CATALOG, DATA_FILE)
-        print(CATALOG)
+        # print(CATALOG)
     
 
 client.run(TOKEN)
