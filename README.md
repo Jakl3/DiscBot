@@ -1,4 +1,4 @@
 # DiscBot
 A simple bot that counts the number of times someone says Nice.
 
-This was a simple bot that I made to count how many times each person has said *nice*, since *nice* has become one of the most used words within my friend group.
+I made this bot because *nice* has become one of the most used words within my friend group, and I wanted to see how many times each of us said it. It can stores data for each individual on each server.
